@@ -8,9 +8,9 @@ public class Bird {
     int x = 100;
     int y = 200;
     public double speed = 0; //初始上抛速度
-    public double upSpeed = 30; //上抛速度
+    public double upSpeed = 20; //上抛速度
     public double t = 0.2;    //位移时间
-    public double g = 5;    //重力加速度
+    public double g = 3;    //重力加速度
     public double s = 0;      //经过t秒后小鸟的位移距离
     public int width;
     public int height;
@@ -23,6 +23,7 @@ public class Bird {
                 images[i] = ImageIO.read(getClass().getResource("image/" + i + ".png"));
             }
             width = image.getWidth();
+            height=image.getHeight();
         } catch (IOException e) {
             System.out.println("文件不存在!");
         }

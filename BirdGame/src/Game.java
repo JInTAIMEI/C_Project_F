@@ -9,10 +9,11 @@ public class Game {
         JFrame jFrame = new JFrame();
         jFrame.setSize(400, 650);
         jFrame.setLocationRelativeTo((Component)null);
-        jFrame.setDefaultCloseOperation(3);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         BirdGame birdGame = new BirdGame();
         jFrame.add(birdGame);
         jFrame.setVisible(true);
         birdGame.Starting();
     }
+
 }
