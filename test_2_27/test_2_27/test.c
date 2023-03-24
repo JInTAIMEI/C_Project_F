@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1 
 #include <stdio.h>
 #include <math.h>
+#include <time.h>
 
 //九九乘法表
 //int main() {
@@ -131,12 +132,55 @@
 //找素数
 //int main() {
 //	for (int i = 100; i <= 200; i++) {
-//		for (int j = 2; j < sqrt(i) + 1; j++) {
-//			if (i % j == 0) {
-//				printf("%d ", i);
+//		int a = sqrt(i);
+//		for (int j = 2; j < a + 1; j++) {
+//			if (i % j == 0)
 //				break;
-//			}
+//			if(j == a)
+//			printf("%d ", i);
 //		}
 //	}
 //	return 0;
 //}
+
+
+//猜数字
+//int main() {
+//	srand((unsigned int)time(NULL));
+//	int a = rand()%100;
+//	while (1) {
+//		int b = 0;
+//		scanf("%d", &b);
+//		if (a > b)
+//			printf("猜小了");
+//		if (a < b)
+//			printf("猜大了");
+//		if (a == b) {
+//			printf("猜中了");
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+
+
+int main() {
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int a = 0;
+	scanf("%d", &a);
+	int left = 0;
+	int right = 9;
+	int mid = left + (right - left) / 2;
+	while (left <= right) {
+		if (mid < a) {
+			left = mid + 1;
+		}
+		else if (mid > a) {
+			right = mid - 1;
+		}
+		else {
+			printf("找到了，下标为%d", mid);
+			break;
+		}
+	}
+	}
